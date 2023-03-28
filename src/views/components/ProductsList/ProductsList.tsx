@@ -68,7 +68,9 @@ const ProductsList: FC<ProductsListProps> = ({ products }) => {
                 >
                     Price
                 </div>
-                <div className="products-list__col">Photo</div>
+                <div className="products-list__col products-list__col--photo">
+                    Photo
+                </div>
                 <div
                     className="products-list__col"
                     onClick={() => {

@@ -46,17 +46,20 @@
         & .products-list__col {
             position: relative;
             font-size: 1.2rem;
+        }
+
+        & .products-list__col:not(.products-list__col--photo) {
             cursor: pointer;
 
             &:hover {
                 color: $grey-color;
             }
-        }
 
-        & .products-list__col:after {
-            content: "↕";
-            position: absolute;
-            right: 20px;
+            &:after {
+                content: "↕";
+                position: absolute;
+                right: 20px;
+            }
         }
     }
 
