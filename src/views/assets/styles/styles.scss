@@ -1,0 +1,46 @@
+@import "./helpers/normalize.scss";
+@import "./helpers/fonts.scss";
+@import "./helpers/variables.scss";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+}
+
+a {
+    color: $primary-color;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.page {
+    position: relative;
+    padding: 50px 0;
+    min-height: calc(100vh - 123px);
+}
+
+.btn {
+    background-color: $secondary-color;
+    color: $white-color;
+    font-size: 1.5rem;
+    border: 0;
+    padding: 15px 25px;
+    transition: opacity 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}

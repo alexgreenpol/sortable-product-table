@@ -1,0 +1,12 @@
+.search-panel {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+
+    &__input {
+        height: 50px;
+        width: 400px;
+        padding: 0 15px;
+        font-size: 1.5rem;
+    }
+}

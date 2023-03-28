@@ -1,0 +1,80 @@
+@import "../../assets/styles/helpers/variables.scss";
+
+.products-list {
+    overflow-x: scroll;
+
+    &__row {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-basis: 12.5%;
+        border-bottom: 1px solid $light-grey-color;
+        min-width: 1200px;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+
+        &:not(.products-list__row--head) {
+            &:after {
+                content: "Remove";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(255, 255, 255, 0.9);
+                color: $secondary-color;
+                font-weight: 600;
+                font-size: 1.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                cursor: pointer;
+                transition: opacity 0.3s;
+            }
+
+            &:hover::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__row--head {
+        & .products-list__col {
+            position: relative;
+            font-size: 1.2rem;
+            cursor: pointer;
+
+            &:hover {
+                color: $grey-color;
+            }
+        }
+
+        & .products-list__col:after {
+            content: "↕";
+            position: absolute;
+            right: 20px;
+        }
+    }
+
+    &__col {
+        padding: 20px;
+        width: 12.5%;
+        text-align: center;
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+
+        & img {
+            object-fit: cover;
+        }
+    }
+}
